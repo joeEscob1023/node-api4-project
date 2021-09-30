@@ -5,7 +5,7 @@ const express = require("express");
 const server = express();
 server.use(express.json());
 
-server.get("/hello", (req, res) => {
+server.get("/api/users", (req, res) => {
   res.send("<h1>HELLO THERE!</h1>");
 });
 
