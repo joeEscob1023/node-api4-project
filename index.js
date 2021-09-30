@@ -6,7 +6,7 @@ const server = express();
 server.use(express.json());
 
 server.get("/api/users", (req, res) => {
-  res.send("<h1>Hi There!</h1>");
+  res.json({ id: 1, name: "Joe" });
 });
 
 const port = process.env.PORT || 3000;
