@@ -41,7 +41,7 @@ server.post("/api/login", (req, res) => {
   const { username, password } = req.body;
   try {
     if (!req.body.username || !req.body.password) {
-      res.status(400).json({
+      res.status(404).json({
         message: "Please provide correct username and password for the user",
       });
     } else {
