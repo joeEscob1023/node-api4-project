@@ -17,7 +17,7 @@ server.get("/users", async (req, res) => {
   }
 });
 
-server.post("/register", async (req, res) => {
+server.post("/api/register", async (req, res) => {
   try {
     const { username, password } = req.body;
     if (!username || !password) {
@@ -36,6 +36,8 @@ server.post("/register", async (req, res) => {
   }
 });
 
-server.post("users/");
+server.post("/login", (req, res) => {
+  console.log("test");
+});
 
 module.exports = server;
